@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: grails.google.cloud
+        defaultPackage: demo
     spring:
         transactionManagement:
             proxies: false

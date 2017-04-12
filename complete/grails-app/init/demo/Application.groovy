@@ -1,4 +1,4 @@
-package grails.google.cloud
+package demo
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

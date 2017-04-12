@@ -1,4 +1,4 @@
-package grails.google.cloud
+package demo
 
 class BootStrap {
 
