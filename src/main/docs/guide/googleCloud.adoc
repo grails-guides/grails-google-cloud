@@ -1,0 +1,9 @@
+Signup for https://cloud.google.com[Google Cloud Platform] and create a new project:
+
+image::createproject_1.png[]
+image::createproject_2.png[]
+
+Install https://cloud.google.com/sdk/downloads[Cloud SDK] for your operating system.
+
+After you have install it, you will run the init command ( `gcloud init` ) in your terminal. It prompts you to select
+the google account which you want to use and the project. 

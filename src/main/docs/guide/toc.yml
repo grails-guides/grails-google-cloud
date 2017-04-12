@@ -1,8 +1,21 @@
-gettingStarted: 
+gettingStarted:
   title: Getting Started
   requirements: What you will need
   howto: How to complete the guide
 writingTheApp:
   title: Writing the Application
-runningTheApp:
-  title: Running the Application
+  domainClass: Domain Class
+  seedData: Seed Data
+  displayBooks: Display Books
+googleCloud:
+  title: Cloud SDK
+appEngine:
+  title: Google App Engine
+  gapGradlePlugin: Google App Engine Gradle Plugin
+  springBootStarter: SpringBoot Starter Tomcat
+  applicationDeploymentConfiguration: Application Deployment Configuration
+cloudSQL:
+  title: Cloud SQL
+  dataSourceGoogleCloudSQL: Datasource using Cloud SQL
+deployingTheApp:
+  title: Deploying the App

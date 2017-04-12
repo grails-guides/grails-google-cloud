@@ -1,0 +1,10 @@
+We want to persist some test data in a Cloud SQL database.
+We are going to use a Grails Domain Class to map Book instances to a MySQL table.
+
+include::{commondir}/common-quoteDomainClass.adoc[]
+
+[source,groovy]
+./grails-app/domain/demo/Book.groovy
+----
+include::{sourceDir}/grails-app/domain/demo/Book.groovy[indent=0]
+----

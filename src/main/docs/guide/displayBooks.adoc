@@ -1,0 +1,22 @@
+In the home page of application, we want to display the books persisted when the application started ( in `BootStrap.groovy`)
+
+To keep this guide small, we are going to modify the default GSP `grails-app/views/index.gsp` and add a little code snippet to
+display a list of book names.
+
+Import the `Book` domain class.
+
+[source,groovy]
+./grails-app/views/index.gsp
+----
+include::{sourceDir}/grails-app/views/index.gsp[indent=0,lines=1]
+----
+
+Iterate the books:
+
+[source,groovy]
+./grails-app/views/index.gsp
+----
+include::{sourceDir}/grails-app/views/index.gsp[indent=0,lines=66..69]
+----
+
+NOTE: In a real Grails app you would encapsulte your GORM logic inside service and a controller will feed a model to your view; the GSP file

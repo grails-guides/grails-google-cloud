@@ -1,0 +1,10 @@
+To deploy the app to Google App Engine run:
+
+[source, bash]
+----
+$ ./gradlew appengineDeploy
+----
+
+Initial deployment may take a while. When finished you will be able to access your app in:
+
+image::welcometograils.png[Welcome to Grails]
