@@ -1,4 +1,4 @@
-package demo
+package org.grails.plugins.googlecloud.storage
 
 import com.google.cloud.storage.Acl
 import com.google.cloud.storage.BlobId

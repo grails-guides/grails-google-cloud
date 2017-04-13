@@ -2,6 +2,7 @@ package demo
 
 import grails.transaction.Transactional
 import groovy.transform.CompileStatic
+import org.grails.plugins.googlecloud.storage.GoogleCloudStorageService
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
 import org.joda.time.format.DateTimeFormat
