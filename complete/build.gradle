@@ -74,6 +74,7 @@ dependencies {
     // tag::cloudTranslateDependency[]
     compile 'com.google.cloud:google-cloud-translate:0.12.0-alpha'
     // end::cloudTranslateDependency[]
+    compile 'com.google.cloud:google-cloud-language:0.11.0-alpha'
 }
 
 
