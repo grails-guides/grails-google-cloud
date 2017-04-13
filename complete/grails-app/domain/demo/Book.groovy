@@ -6,5 +6,6 @@ import groovy.transform.CompileStatic
 class Book {
     String name
     static constraints = {
+        name unique: true
     }
 }

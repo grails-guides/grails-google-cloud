@@ -1,0 +1,32 @@
+We are going to use the version number of the serving app to check its logs.
+
+image::logs.png[]
+
+**Application log messages written to stdout and stderr are automatically collected and can be viewed in the Logs Viewer.**
+
+We are going to create a controller and log with level INFO and verify the log statement is visible in the Log Viewer.
+
+[source,groovy]
+./grails-app/controllers/demo/LegalController.groovy
+----
+include::{sourceDir}/grails-app/controllers/demo/LegalController.groovy[indent=0]
+----
+
+We configure logback:
+[source,groovy]
+./grails-app/conf/logback.groovy
+----
+include::{sourceDir}/grails-app/conf/logback.groovy[indent=0]
+----
+
+<1> Log INFO level statements of classes under package `demo` to `stdout` with additivity `false`
+
+If you redeploy the app to app engine and hit the controller `/legal` end point you will see the logging statements in
+Log Viewer.
+
+image::logstatement.png[]
+
+Check https://cloud.google.com/appengine/docs/flexible/java/writing-application-logs[Writing application logs] documentation to
+read more about Logs in the Flexible Environment.
+
+NOTE: Write your application logs using stdout for output and stderr for errors. Note that this does not provide log levels that you can use for filtering in the Logs Viewer; however, the Logs Viewer does provide other filtering, such as text, timestamp, etc.

@@ -19,3 +19,5 @@ cloudSQL:
   dataSourceGoogleCloudSQL: Datasource using Cloud SQL
 deployingTheApp:
   title: Deploying the App
+logging:
+  title: Logging  

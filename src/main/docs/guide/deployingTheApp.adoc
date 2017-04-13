@@ -8,3 +8,7 @@ $ ./gradlew appengineDeploy
 Initial deployment may take a while. When finished you will be able to access your app in:
 
 image::welcometograils.png[Welcome to Grails]
+
+If you go to the _Versions_ section in the App Engine administration panel, you will see the deployed app.
+
+image::versions.png[]
