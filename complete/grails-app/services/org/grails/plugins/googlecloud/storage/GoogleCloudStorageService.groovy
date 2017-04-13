@@ -23,14 +23,23 @@ class GoogleCloudStorageService implements GrailsConfigurationAware {
     Storage storage = StorageOptions.getDefaultInstance().getService()
 
     String storeMultipartFile(String fileName, MultipartFile multipartFile) {
-        BlobInfo blobInfo =
-                storage.create(
-                        BlobInfo.newBuilder(bucket, fileName)
-                        // Modify access list to allow all users with link to read file
-                        .setAcl(new ArrayList<>(Arrays.asList(Acl.of(Acl.User.ofAllUsers(), Acl.Role.READER))))
-                                .build(),
-                        multipartFile.inputStream)
+        storeInputStream(fileName, multipartFile.inputStream)
+    }
+
+    String storeInputStream(String fileName, InputStream inputStream) {
+        BlobInfo blobInfo = storage.create(readableBlobInfo(bucket, fileName), inputStream)
         blobInfo.mediaLink
+    }
+
+    String storeBytes(String fileName, byte[] bytes) {
+        BlobInfo blobInfo = storage.create(readableBlobInfo(bucket, fileName), bytes)
+        blobInfo.mediaLink
+    }
+
+    private static BlobInfo readableBlobInfo(String bucket, String fileName) {
+        BlobInfo.newBuilder(bucket, fileName)
+                .setAcl([Acl.of(Acl.User.ofAllUsers(), Acl.Role.READER)]) // Modify access list to allow all users with link to read file
+                .build()
     }
 
     boolean deleteFile(String fileName) {
