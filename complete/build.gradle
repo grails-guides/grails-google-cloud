@@ -35,7 +35,6 @@ repositories {
     jcenter()
 }
 
-
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
@@ -64,10 +63,16 @@ dependencies {
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 
     // tag::cloudStorageDependency[]
-    compile 'com.google.cloud:google-cloud-storage:0.11.0-beta'
+    compile 'com.google.cloud:google-cloud-storage:0.12.0-beta'
     // end::cloudStorageDependency[]
+
+    // tag::cloudSpeechDependency[]
+    compile 'com.google.cloud:google-cloud-speech:0.12.0-alpha'
+    // end::cloudSpeechDependency[]
+
+
     // tag::cloudTranslateDependency[]
-    compile 'com.google.cloud:google-cloud-translate:0.11.0-alpha'
+    compile 'com.google.cloud:google-cloud-translate:0.12.0-alpha'
     // end::cloudTranslateDependency[]
 }
 
@@ -81,4 +86,8 @@ bootRun {
 assets {
     minifyJs = true
     minifyCss = true
+}
+
+bootRun {
+    systemProperties System.properties
 }
