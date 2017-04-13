@@ -1,4 +1,3 @@
-<%@ page import="demo.Book" %>
 <!doctype html>
 <html>
 <head>
@@ -62,11 +61,6 @@
                 whatever content you may choose. Below is a list of controllers that are currently deployed in
                 this application, click on each to execute its default action:
             </p>
-
-            <ul><g:each var="book" in="${Book.list()}">
-                    <li>${book.name}</li>
-                </g:each>
-            </ul>
 
             <div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
