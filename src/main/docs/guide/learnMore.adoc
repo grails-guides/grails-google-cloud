@@ -1,6 +1,6 @@
-If you want to learn more about Google Cloud and Grails integration checkout a more complete sample app.
+If you want to learn more about Google Cloud and Grails integration, checkout a more complete sample app.
 
-https://grails-samples.github.io/google-bookshelf/[Google Cloud Bookshelf with Grails]
+The https://grails-samples.github.io/google-bookshelf/[Google Cloud Bookshelf with Grails]
 application shows how to use a variety of Google Cloud Platform products, including some of the services
 described in this guides and other services such as:
 

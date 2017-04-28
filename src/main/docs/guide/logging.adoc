@@ -1,4 +1,4 @@
-For the version which you would like to inspect, select logs in the diagnose dropdown:
+For the version which you would like to inspect, select _Logs_ in the diagnose dropdown:
 
 image::logs.png[]
 
@@ -21,12 +21,12 @@ include::{sourceDir}/grails-app/conf/logback.groovy[indent=0]
 
 <1> Log INFO level statements of classes under package `demo` to `stdout` with additivity `false`
 
-If you redeploy the app to app engine and hit the controller `/legal` end point you will see the logging statements in
-Log Viewer.
+If you redeploy the app to App Engine and access the `/legal` end point, you will see the logging statements in Log Viewer.
 
 image::logstatement.png[]
 
-Check https://cloud.google.com/appengine/docs/flexible/java/writing-application-logs[Writing application logs] documentation to
-read more about Logs in the Flexible Environment.
+Check https://cloud.google.com/appengine/docs/flexible/java/writing-application-logs[Writing Application Logs] documentation to
+read more about logs in the Flexible Environment.
 
-NOTE: Write your application logs using stdout for output and stderr for errors. Note that this does not provide log levels that you can use for filtering in the Logs Viewer; however, the Logs Viewer does provide other filtering, such as text, timestamp, etc.
+NOTE: Write your application logs using stdout for output and stderr for errors. Note that this does not provide log levels
+that you can use for filtering in the Logs Viewer; however, the Logs Viewer does provide other filtering, such as text, timestamp, etc.
