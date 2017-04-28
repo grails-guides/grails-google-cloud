@@ -1,0 +1,53 @@
+We allow our users to upload a book cover image. To store the images in the Cloud, we use https://cloud.google.com/storage/[Google Cloud Storage]
+____
+Google Cloud Storage is unified object storage for developers and enterprises, from live data serving to data analytics/ML to data archiving.
+____
+
+https://console.cloud.google.com/flows/enableapi?apiid=storage_api,logging,sqladmin.googleapis.com&redirect=https://console.cloud.google.com&_ga=1.20629880.1963584502.1488379440[Enable Cloud Datastore API] for the project.
+
+We use a Grails Command Object and two controller's actions to handle the image upload:
+
+[source,groovy]
+./grails-app/controllers/demo/FeaturedImageCommand.groovy
+----
+include::{sourceDir}/grails-app/controllers/demo/FeaturedImageCommand.groovy[indent=0]
+----
+
+[source,groovy]
+./grails-app/controllers/demo/BookController.groovy
+----
+include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0, tag=editFeaturedImage]
+include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0, tag=uploadFeaturedImage]
+----
+
+Our business logic is handled in `UploadBookFeaturedImageService.groovy`
+
+[source,groovy]
+./grails-app/services/demo/UploadBookFeaturedImageService.groovy
+----
+include::{sourceDir}/grails-app/services/demo/UploadBookFeaturedImageService.groovy[indent=0]
+----
+
+The code which interacts with Cloud Storage is encapsulated in a service:
+
+[source,groovy]
+./grails-app/services/org/grails/plugins/googlecloud/storage/GoogleCloudStorageService.groovy
+----
+include::{sourceDir}/grails-app/services/org/grails/plugins/googlecloud/storage/GoogleCloudStorageService.groovy[indent=0]
+----
+
+The above service uses two configuration parameters:
+
+[source,groovy]
+./grails-app/conf/application.yml
+----
+include::{sourceDir}/grails-app/conf/application.yml[indent=0, tag=googleCloudConfiguration]
+----
+
+If the upload of an image to Google Cloud is successful, we save the reference to the media url in our domain class.
+
+[source,groovy]
+./grails-app/services/demo/BookGormService.groovy
+----
+include::{sourceDir}/grails-app/services/demo/BookGormService.groovy[indent=0, tag=updateFeaturedImageUrl]
+----

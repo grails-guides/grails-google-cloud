@@ -1,4 +1,4 @@
-We are going to use the version number of the serving app to check its logs.
+For the version which you would like to inspect, select logs in the diagnose dropdown:
 
 image::logs.png[]
 

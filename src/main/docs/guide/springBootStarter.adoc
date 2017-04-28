@@ -1,7 +1,0 @@
-You need to change the `spring-boot-starter-tomcat` dependency to provided. 
-
-[source,groovy]
-./build.gradle
-----
-include::{sourceDir}/build.gradle[indent=0, tag=springBootStarterTomcat]
-----

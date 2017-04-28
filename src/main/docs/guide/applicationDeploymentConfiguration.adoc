@@ -1,6 +1,6 @@
-To deploy to Google App Engine, we need to add a file `src/main/appengine/app.yaml`
+To deploy to Google App Engine, we need to add the file `src/main/appengine/app.yaml`
 
-It describes an application's deployment configuration:
+It describes the application's deployment configuration:
 
 [source,groovy]
 ./src/main/appengine/app.yaml
@@ -8,6 +8,7 @@ It describes an application's deployment configuration:
 include::{sourceDir}/src/main/appengine/app.yaml[indent=0]
 ----
 
-Here, `app.yaml` specifies the runtime used by the app, and sets env: flex, specifying that the app uses the https://cloud.google.com/appengine/docs/flexible/[flexible environment].
+Here, `app.yaml` specifies the runtime used by the app, and sets `env: flex`,
+specifying that the app uses the https://cloud.google.com/appengine/docs/flexible/[flexible environment].
 
 For more information on how the Java runtime works, see The https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9[Java 8 / Jetty 9.3 Runtime].

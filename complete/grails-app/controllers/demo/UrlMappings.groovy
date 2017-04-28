@@ -9,7 +9,9 @@ class UrlMappings {
             }
         }
 
+        // tag::homeUrlMapping[]
         "/"(controller: 'book')
+        // end::homeUrlMapping[]
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

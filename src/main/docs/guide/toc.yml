@@ -12,12 +12,20 @@ googleCloud:
 appEngine:
   title: Google App Engine
   gapGradlePlugin: Google App Engine Gradle Plugin
-  springBootStarter: SpringBoot Starter Tomcat
   applicationDeploymentConfiguration: Application Deployment Configuration
+  springBootJetty: SpringBoot Jetty
 cloudSQL:
   title: Cloud SQL
   dataSourceGoogleCloudSQL: Datasource using Cloud SQL
+cloudStorage:
+  title: Cloud Storage
 deployingTheApp:
   title: Deploying the App
 logging:
-  title: Logging  
+    title: Logging
+learnMore:
+    title: Learn more     
+helpWithGrails:
+    title: Help With Grails
+appendixA:
+  title: Appendix A - Scaffolding

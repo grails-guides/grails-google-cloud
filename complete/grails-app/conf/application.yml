@@ -1,9 +1,9 @@
 # tag::googleCloudConfiguration[]
 ---
 googlecloud:
-    projectid: grailstest-164318
+    projectid: grailstest
     cloudStorage:
-        bucket: grailstest-164318.appspot.com
+        bucket: grailstest
 # end::googleCloudConfiguration[]
 ---
 grails:
@@ -128,8 +128,8 @@ environments:
     production:
         dataSource:
             driverClassName: com.mysql.jdbc.Driver
-            dbCreate: update
-            url: jdbc:mysql://google/grailstestdb?cloudSqlInstance=grailstest-164318:europe-west1:grailstest-mysql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=secret&useSSL=false # <1>
+            dbCreate: create-drop
+            url: jdbc:mysql://google/grailstestdb?cloudSqlInstance=grailstest-164318:europ-west1:grailstest-mysql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=secret&useSSL=false # <1>
             properties:
                 jmxEnabled: true
                 initialSize: 5

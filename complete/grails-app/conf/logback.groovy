@@ -35,4 +35,3 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
 }
 root(ERROR, ['STDOUT'])
 logger 'demo', INFO, ['STDOUT'], false // <1>
-logger 'org.grails.plugins.googlecloud.speech', INFO, ['STDOUT'], false
