@@ -1,4 +1,4 @@
-To deploy to App Engine we are going to use the https://github.com/GoogleCloudPlatform/app-gradle-plugin[Google App Engine Gradle Plugin].
+To deploy to App Engine, we are going to use the https://github.com/GoogleCloudPlatform/app-gradle-plugin[Google App Engine Gradle Plugin].
 
 We need to modify `build.gradle`
 
@@ -8,7 +8,7 @@ We need to modify `build.gradle`
 include::{sourceDir}/build.gradle[indent=0, tag=gradleBuildscript]
 ----
 
-<1>  Add the plugin as a buildscript dependency
+<1>  Add the plugin as a buildscript dependency.
 
 
 [source,groovy]
@@ -17,4 +17,4 @@ include::{sourceDir}/build.gradle[indent=0, tag=gradleBuildscript]
 include::{sourceDir}/build.gradle[indent=0, tag=gradleApplyPlugins]
 ----
 
-<1>  Apply the plugin
+<1>  Apply the plugin.
