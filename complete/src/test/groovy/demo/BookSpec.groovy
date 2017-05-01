@@ -9,13 +9,7 @@ import spock.lang.Specification
 @TestFor(Book)
 class BookSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "book name is not nullable"() {
+    void 'book name is not nullable'() {
         when:
         domain.name = null
 

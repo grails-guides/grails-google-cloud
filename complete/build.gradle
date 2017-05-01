@@ -97,3 +97,7 @@ codenarc {
     configFile = new File(projectDir, 'config/codenarc/rules.groovy')
     reportFormat = 'html'
 }
+
+codenarcTest {
+    configFile  = new File(projectDir, 'config/codenarc/rulesTest.groovy')
+}
