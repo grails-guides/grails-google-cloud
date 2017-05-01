@@ -5,7 +5,7 @@ ____
 
 https://console.cloud.google.com/flows/enableapi?apiid=storage_api,logging,sqladmin.googleapis.com&redirect=https://console.cloud.google.com&_ga=1.20629880.1963584502.1488379440[Enable Cloud Datastore API] for the project.
 
-We use a Grails Command Object and two controller's actions to handle the image upload:
+We use a Grails Command Object and two controller actions to handle the image upload:
 
 [source,groovy]
 ./grails-app/controllers/demo/FeaturedImageCommand.groovy
@@ -20,7 +20,7 @@ include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0,
 include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0, tag=uploadFeaturedImage]
 ----
 
-Our business logic is handled in `UploadBookFeaturedImageService.groovy`
+Our business logic is handled in `UploadBookFeaturedImageService.groovy`:
 
 [source,groovy]
 ./grails-app/services/demo/UploadBookFeaturedImageService.groovy

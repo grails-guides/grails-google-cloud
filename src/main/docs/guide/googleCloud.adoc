@@ -5,8 +5,11 @@ image::createproject_2.png[]
 
 Install https://cloud.google.com/sdk/downloads[Cloud SDK] for your operating system.
 
-After you have install it, run the init command in your terminal:
+After you have installed the SDK, run the init command in your terminal:
 
-`gcloud init`
+[source, bash]
+----
+$ gcloud init
+----
 
-It prompts you to select the google account which you want to use and the project.
+It will prompt you to select the Google account and the project which you want to use.

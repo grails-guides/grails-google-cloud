@@ -1,6 +1,6 @@
-In the home page of application, we want to display the books persisted when the application started ( in `BootStrap.groovy`)
+As the home page of the application, we want to display the books persisted when the application started ( in `BootStrap.groovy`)
 
-We map the home page to be resolved by `BookController`
+We map the home page to be resolved by `BookController`.
 
 [source,groovy]
 ./grails-app/controllers/demo/UrlMappings.groovy
@@ -9,6 +9,6 @@ include::{sourceDir}/grails-app/controllers/demo/UrlMappings.groovy[indent=0,tag
 ----
 
 We have modified slightly the output of Grails static scaffolding command `generate-all`
-to create a CRUD functionality for the domain class `Book`.
+to provide CRUD functionality for the domain class `Book`.
 
-You can find the code: `BookController`, `BookGormService` and GSP views in appendix A.
+You can find the code: `BookController`, `BookGormService` and GSP views in <<appendixA,the appendix>>.

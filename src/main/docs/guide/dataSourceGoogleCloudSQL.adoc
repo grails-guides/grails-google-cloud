@@ -1,7 +1,7 @@
 As described in https://cloud.google.com/appengine/docs/flexible/java/using-cloud-sql[Using Cloud SQL with a Flexible Environment] documentation, we need to
 add several runtime dependencies and configure the production url to use the Cloud SQL MySQL database we created before.
 
-We replace the H2 dependency with several MySQL dependencies.
+Replace the H2 dependency with several MySQL dependencies.
 
 [source,groovy]
 ./build.gradle
@@ -13,7 +13,7 @@ include::{sourceDir}/build.gradle[indent=0, tag=gradleMySQLDependencies]
 <2>  Cloud SQL MySQL Socket Factory
 
 
-[source,yaml]
+[source,yaml,role="unjust"]
 ./grails-app/conf/application.yml
 ----
 include::{sourceDir}/grails-app/conf/application.yml[indent=0, tag=dataSourceConfiguration]
