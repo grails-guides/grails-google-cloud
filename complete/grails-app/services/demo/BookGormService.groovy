@@ -40,8 +40,8 @@ class BookGormService {
     }
     // end::deleteById[]
 
-
     // tag::updateFeaturedImageUrl[]
+    @SuppressWarnings('LineLength')
     Book updateFeaturedImageUrl(Long id, Long version, String fileName, String featuredImageUrl, boolean flush = false) {
         Book book = Book.get(id)
         if ( !book ) {

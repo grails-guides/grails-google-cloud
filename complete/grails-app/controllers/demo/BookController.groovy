@@ -1,30 +1,34 @@
 // tag::packageImport[]
 package demo
-// end::packageImport[]
 
+// end::packageImport[]
 // tag::imports[]
+import static org.springframework.http.HttpStatus.CREATED
+import static org.springframework.http.HttpStatus.OK
+import static org.springframework.http.HttpStatus.NOT_FOUND
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
-
-import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-// end::imports[]
 
+// end::imports[]
 // tag::classDeclaration[]
+@SuppressWarnings('LineLength')
 @CompileStatic
 class BookController {
 // end::classDeclaration[]
 
   // tag::properties[]
-    static allowedMethods = [index: 'GET',
-                             show: 'GET',
-                             edit: 'GET',
-                             create: 'GET',
-                             editFeaturedImage: 'GET',
-                             save: 'POST',
-                             update: 'PUT',
-                             uploadFeaturedImage: 'POST',
-                             delete: 'DELETE']
+    static allowedMethods = [
+            index: 'GET',
+            show: 'GET',
+            edit: 'GET',
+            create: 'GET',
+            editFeaturedImage: 'GET',
+            save: 'POST',
+            update: 'PUT',
+            uploadFeaturedImage: 'POST',
+            delete: 'DELETE',
+    ]
 
     UploadBookFeaturedImageService uploadBookFeaturedImageService
 
@@ -48,6 +52,7 @@ class BookController {
     // end::actionShow[]
 
     // tag::actionCreate[]
+    @SuppressWarnings(['FactoryMethodName', 'GrailsMassAssignment'])
     @Transactional(readOnly = true)
     def create() {
         respond new Book(params)
@@ -60,7 +65,6 @@ class BookController {
         respond book
     }
     // end::actionEdit[]
-
 
     // tag::actionSave[]
     @CompileDynamic
@@ -127,7 +131,7 @@ class BookController {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'book.label', default: 'Book'), book.id])
                 redirect book
             }
-            '*'{ respond book, [status: OK] }
+            '*' { respond book, [status: OK] }
         }
     }
     // end::actionUpdate[]
@@ -148,20 +152,21 @@ class BookController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'book.label', default: 'Book'), bookId])
-                redirect action:"index", method:"GET"
+                redirect action: 'index', method: 'GET'
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
     // end::actionDelete[]
 
-// tag::editFeaturedImage[]
+    // tag::editFeaturedImage[]
     @Transactional(readOnly = true)
     def editFeaturedImage(Book book) {
         respond book
     }
-// end::editFeaturedImage[]
-// tag::uploadFeaturedImage[]
+    // end::editFeaturedImage[]
+
+    // tag::uploadFeaturedImage[]
     @CompileDynamic
     def uploadFeaturedImage(FeaturedImageCommand cmd) {
 
@@ -186,10 +191,10 @@ class BookController {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'book.label', default: 'Book'), book.id])
                 redirect book
             }
-            '*'{ respond book, [status: OK] }
+            '*' { respond book, [status: OK] }
         }
     }
-// end::uploadFeaturedImage[]
+    // end::uploadFeaturedImage[]
 
     // tag::notFound[]
     @CompileDynamic
@@ -197,9 +202,9 @@ class BookController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), params.id])
-                redirect action: "index", method: "GET"
+                redirect action: 'index', method: 'GET'
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
     // end::notFound[]

@@ -3,16 +3,17 @@ package demo
 class UrlMappings {
 
     static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
+        "/$controller/$action?/$id?(.$format)?" {
             constraints {
                 // apply constraints here
             }
         }
 
         // tag::homeUrlMapping[]
-        "/"(controller: 'book')
+        '/'(controller: 'book')
         // end::homeUrlMapping[]
-        "500"(view:'/error')
-        "404"(view:'/notFound')
+
+        '500'(view: '/error')
+        '404'(view: '/notFound')
     }
 }
