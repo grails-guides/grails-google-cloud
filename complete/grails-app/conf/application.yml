@@ -1,9 +1,9 @@
 # tag::googleCloudConfiguration[]
 ---
 googlecloud:
-    projectid: grailstest
+    projectid: test-grails-guide
     cloudStorage:
-        bucket: grailstest
+        bucket: test-grails-guide-bucket
 # end::googleCloudConfiguration[]
 ---
 grails:
@@ -129,7 +129,7 @@ environments:
         dataSource:
             driverClassName: com.mysql.jdbc.Driver
             dbCreate: create-drop
-            url: jdbc:mysql://google/grailstestdb?cloudSqlInstance=grailstest-164318:europ-west1:grailstest-mysql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=secret&useSSL=false # <1>
+            url: jdbc:mysql://google/grailstestdb?cloudSqlInstance=test-grails-guide:europe-west1:grailstest-mysql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=foo123&useSSL=false # <1>
             properties:
                 jmxEnabled: true
                 initialSize: 5
