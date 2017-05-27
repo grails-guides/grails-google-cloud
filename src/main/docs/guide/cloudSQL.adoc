@@ -3,6 +3,10 @@ ____
 Cloud SQL is a fully-managed database service that makes it easy to set up, maintain, manage, and administer your relational PostgreSQL BETA and MySQL databases in the cloud. Cloud SQL offers high performance, scalability, and convenience. Hosted on Google Cloud Platform, Cloud SQL provides a database infrastructure for applications running anywhere.
 ____
 
+If you have not enabled Cloud SQL API already, Go to your project dashboard and enable it.
+
+image::enable-cloud-sql-api.png[]
+
 We are going to https://console.cloud.google.com/sql[create a new instance of Cloud SQL]
 associated to the same project we created before.
 
