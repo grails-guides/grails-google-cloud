@@ -29,9 +29,9 @@ include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0,
 === Book Services
 
 [source,groovy]
-./grails-app/services/demo/BookService.groovy
+.grails-app/services/demo/BookGormService.groovy
 ----
-include::{sourceDir}/grails-app/controllers/demo/BookService.groovy[indent=0]
+include::{sourceDir}/grails-app/services/demo/BookGormService.groovy[indent=0]
 ----
 
 === Book GSPs
