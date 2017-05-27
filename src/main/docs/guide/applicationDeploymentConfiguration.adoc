@@ -3,7 +3,7 @@ To deploy to Google App Engine, we need to add the file `src/main/appengine/app.
 It describes the application's deployment configuration:
 
 [source,groovy]
-./src/main/appengine/app.yaml
+.src/main/appengine/app.yaml
 ----
 include::{sourceDir}/src/main/appengine/app.yaml[indent=0]
 ----

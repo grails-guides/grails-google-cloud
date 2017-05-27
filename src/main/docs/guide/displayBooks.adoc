@@ -3,7 +3,7 @@ As the home page of the application, we want to display the books persisted when
 We map the home page to be resolved by `BookController`.
 
 [source,groovy]
-./grails-app/controllers/demo/UrlMappings.groovy
+.grails-app/controllers/demo/UrlMappings.groovy
 ----
 include::{sourceDir}/grails-app/controllers/demo/UrlMappings.groovy[indent=0,tag=homeUrlMapping]
 ----

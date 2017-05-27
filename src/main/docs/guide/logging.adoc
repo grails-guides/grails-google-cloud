@@ -7,14 +7,14 @@ image::logs.png[]
 We are going to create a controller and log with level INFO and verify the log statement is visible in the Log Viewer.
 
 [source,groovy]
-./grails-app/controllers/demo/LegalController.groovy
+.grails-app/controllers/demo/LegalController.groovy
 ----
 include::{sourceDir}/grails-app/controllers/demo/LegalController.groovy[indent=0]
 ----
 
 We configure logback:
 [source,groovy]
-./grails-app/conf/logback.groovy
+.grails-app/conf/logback.groovy
 ----
 include::{sourceDir}/grails-app/conf/logback.groovy[indent=0]
 ----

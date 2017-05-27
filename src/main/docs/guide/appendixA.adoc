@@ -1,7 +1,7 @@
 === Book Controller
 
 [source,groovy]
-./grails-app/controllers/demo/BookController.groovy
+.grails-app/controllers/demo/BookController.groovy
 ----
 include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0, tag=packageImport]
 
@@ -37,25 +37,25 @@ include::{sourceDir}/grails-app/services/demo/BookGormService.groovy[indent=0]
 === Book GSPs
 
 [source,groovy]
-./grails-app/views/book/index.gsp
+.grails-app/views/book/index.gsp
 ----
 include::{sourceDir}/grails-app/views/book/index.gsp[indent=0]
 ----
 
 [source,groovy]
-./grails-app/views/book/show.gsp
+.grails-app/views/book/show.gsp
 ----
 include::{sourceDir}/grails-app/views/book/show.gsp[indent=0]
 ----
 
 [source,groovy]
-./grails-app/views/book/edit.gsp
+.grails-app/views/book/edit.gsp
 ----
 include::{sourceDir}/grails-app/views/book/edit.gsp[indent=0]
 ----
 
 [source,groovy]
-./grails-app/views/book/create.gsp
+.grails-app/views/book/create.gsp
 ----
 include::{sourceDir}/grails-app/views/book/create.gsp[indent=0]
 ----

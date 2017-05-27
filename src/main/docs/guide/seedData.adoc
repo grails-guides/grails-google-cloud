@@ -1,7 +1,7 @@
 When the application starts we are going to add some seed data. In particular, we persist a list of books.
 
 [source,groovy]
-./grails-app/init/demo/BootStrap.groovy
+.grails-app/init/demo/BootStrap.groovy
 ----
 include::{sourceDir}/grails-app/init/demo/BootStrap.groovy[indent=0]
 ----

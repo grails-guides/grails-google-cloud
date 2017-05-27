@@ -6,7 +6,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/howto-embedded-se
 Replace tomcat:
 
 [source, groovy]
-.app/build.gradle
+.build.gradle
 ----
 provided 'org.springframework.boot:spring-boot-starter-tomcat'
 ----
@@ -14,7 +14,7 @@ provided 'org.springframework.boot:spring-boot-starter-tomcat'
 with jetty:
 
 [source,groovy]
-./build.gradle
+.build.gradle
 ----
 include::{sourceDir}/build.gradle[indent=0, tag=springBootStarterJetty]
 ----
@@ -22,7 +22,7 @@ include::{sourceDir}/build.gradle[indent=0, tag=springBootStarterJetty]
 We need to exclude the tomcat-juli dependency as well. Add:
 
 [source,groovy]
-./build.gradle
+.build.gradle
 ----
 include::{sourceDir}/build.gradle[indent=0, tag=configurations]
 ----

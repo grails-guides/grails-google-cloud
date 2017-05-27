@@ -3,7 +3,7 @@ To deploy to App Engine, we are going to use the https://github.com/GoogleCloudP
 We need to modify `build.gradle`
 
 [source,groovy]
-./build.gradle
+.build.gradle
 ----
 include::{sourceDir}/build.gradle[indent=0, tag=gradleBuildscript]
 ----
@@ -12,7 +12,7 @@ include::{sourceDir}/build.gradle[indent=0, tag=gradleBuildscript]
 
 
 [source,groovy]
-./build.gradle
+.build.gradle
 ----
 include::{sourceDir}/build.gradle[indent=0, tag=gradleApplyPlugins]
 ----

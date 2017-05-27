@@ -4,7 +4,7 @@ add several runtime dependencies and configure the production url to use the Clo
 Replace the H2 dependency with several MySQL dependencies.
 
 [source,groovy]
-./build.gradle
+.build.gradle
 ----
 include::{sourceDir}/build.gradle[indent=0, tag=gradleMySQLDependencies]
 ----
@@ -14,7 +14,7 @@ include::{sourceDir}/build.gradle[indent=0, tag=gradleMySQLDependencies]
 
 
 [source,yaml,role="unjust"]
-./grails-app/conf/application.yml
+.grails-app/conf/application.yml
 ----
 include::{sourceDir}/grails-app/conf/application.yml[indent=0, tag=dataSourceConfiguration]
 ----
