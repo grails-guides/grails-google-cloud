@@ -1,12 +1,7 @@
 package demo
 
-import org.grails.plugins.googlecloud.storage.GoogleCloudStorageService
-import org.joda.time.DateTime
-import org.joda.time.DateTimeZone
-import org.joda.time.format.DateTimeFormat
-import org.joda.time.format.DateTimeFormatter
-import groovy.util.logging.Slf4j
 import groovy.transform.CompileStatic
+import groovy.util.logging.Slf4j
 
 @Slf4j
 @CompileStatic
@@ -16,10 +11,8 @@ class UploadBookFeaturedImageService {
 
     GoogleCloudStorageService googleCloudStorageService
 
-    private static String fileSuffix() {
-        DateTimeFormatter dtf = DateTimeFormat.forPattern('-YYYY-MM-dd-HHmmssSSS')
-        DateTime dt = DateTime.now(DateTimeZone.UTC)
-        dt.toString(dtf)
+    static String fileSuffix() {
+        new Date().format('-YYYY-MM-dd-HHmmssSSS')
     }
 
     Book uploadFeaturedImage(FeaturedImageCommand cmd) {
