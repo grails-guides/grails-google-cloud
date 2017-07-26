@@ -243,7 +243,8 @@ a.navbar-brand {
 @media (max-width: 690px) {
     .event-logo {
         height: 60px;
-    }}
+    }
+}
 
 @media (max-width: 475px) {
     .event-logo {
