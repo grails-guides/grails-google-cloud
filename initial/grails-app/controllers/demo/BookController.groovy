@@ -6,8 +6,6 @@ import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import org.springframework.context.MessageSource
 
-import java.awt.print.Book
-
 import static org.springframework.http.HttpStatus.*
 
 // end::packageImport[]
