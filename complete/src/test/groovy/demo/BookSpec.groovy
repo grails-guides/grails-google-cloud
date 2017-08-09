@@ -1,6 +1,5 @@
 package demo
 
-import grails.test.mixin.TestFor
 import spock.lang.Specification
 import grails.testing.gorm.DomainUnitTest
 
