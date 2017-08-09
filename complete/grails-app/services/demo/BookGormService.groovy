@@ -1,6 +1,6 @@
 package demo
 
-import grails.transaction.Transactional
+import grails.gorm.transactions.Transactional
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 
@@ -40,18 +40,18 @@ class BookGormService {
     }
     // end::deleteById[]
 
-    // tag::updateFeaturedImageUrl[]
-    @SuppressWarnings('LineLength')
-    Book updateFeaturedImageUrl(Long id, Long version, String fileName, String featuredImageUrl, boolean flush = false) {
-        Book book = Book.get(id)
-        if ( !book ) {
-            return null
-        }
-        book.version = version
-        book.fileName = fileName
-        book.featuredImageUrl = featuredImageUrl
-        book.save(flush: flush)
-        book
+//tag::updateFeaturedImageUrl[]
+@SuppressWarnings('LineLength')
+Book updateFeaturedImageUrl(Long id, Long version, String fileName, String featuredImageUrl, boolean flush = false) {
+    Book book = Book.get(id)
+    if ( !book ) {
+        return null
     }
-    // end::updateFeaturedImageUrl[]
+    book.version = version
+    book.fileName = fileName
+    book.featuredImageUrl = featuredImageUrl
+    book.save(flush: flush)
+    book
+}
+//end::updateFeaturedImageUrl[]
 }

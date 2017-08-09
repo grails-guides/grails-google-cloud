@@ -1,61 +1,98 @@
-We allow our users to upload a book cover image. To store the images in the Cloud, we use https://cloud.google.com/storage/[Google Cloud Storage]
-____
-Google Cloud Storage is unified object storage for developers and enterprises, from live data serving to data analytics/ML to data archiving.
-____
+We allow our users to upload a book cover image. To store the images in the Cloud, we
+use https://cloud.google.com/storage/[Google Cloud Storage]
 
-https://console.cloud.google.com/flows/enableapi?apiid=storage_api,logging,sqladmin.googleapis.com&redirect=https://console.cloud.google.com&_ga=1.20629880.1963584502.1488379440[Enable Cloud Datastore API] for the project, if you have not enabled it already.
+> Google Cloud Storage is unified object storage for developers and enterprises, from live data serving to data analytics/ML to data archiving.
 
-image::enable-cloud-storage.png[]
+https://console.cloud.google.com/flows/enableapi?apiid=storage_api,logging,sqladmin.googleapis.com&redirect=https://console.cloud.google.com&_ga=1.20629880.1963584502.1488379440[Enable Cloud Storage API] for the project, if you have not enabled it already.
 
-You can create a Cloud Storage Bucket as illustrated in the image below:
+image::cloudstorage-1.png[]
 
-image::create-bucket.png[]
+image::cloudstorage-2.png[]
 
-You will need to configure in `application.yml` your Cloud Storage Bucket and project id:
+image::cloudstorage-3.png[]
+
+
+You can create a Cloud Storage Bucket as illustrated in the images below. We name the bucket `grailsbucket`
+
+image::cloudstorage-4.png[]
+
+image::cloudstorage-5.png[]
+
+image::cloudstorage-6.png[]
+
+Add Cloud Storage dependency to your project dependencies
+
+[source,groovy]
+.build.gradle
+----
+include::{sourceDir}/build.gradle[tag=cloudstorage]
+----
+
+We need to exclude _com.google.guava:guava-jdk5_ too:
+
+[source,groovy]
+.build.gradle
+----
+include::{sourceDir}/build.gradle[tag=configurationsexclude]
+----
+
+Append these configuration (Cloud Storage Bucket and Project id) parameters to `application.yml`
 
 [source,groovy]
 .grails-app/conf/application.yml
 ----
-include::{sourceDir}/grails-app/conf/application.yml[indent=0, tag=googleCloudConfiguration]
+include::{sourceDir}/grails-app/conf/application.yml[tag=bucket]
 ----
 
 These configuration parameters are used by the services described below.
 
-We use a Grails Command Object and two controller actions to handle the image upload:
+Create a Grails Command Object to manage file upload parameters.
 
 [source,groovy]
 .grails-app/controllers/demo/FeaturedImageCommand.groovy
 ----
-include::{sourceDir}/grails-app/controllers/demo/FeaturedImageCommand.groovy[indent=0]
+include::{sourceDir}/grails-app/controllers/demo/FeaturedImageCommand.groovy[]
 ----
+
+Add two controller actions to `BookController`:
 
 [source,groovy]
 .grails-app/controllers/demo/BookController.groovy
 ----
-include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0, tag=editFeaturedImage]
-include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[indent=0, tag=uploadFeaturedImage]
+include::{sourceDir}/grails-app/controllers/demo/BookController.groovy[tag=featuredImage]
 ----
 
-Our business logic is handled in `UploadBookFeaturedImageService.groovy`:
+The previous controller actions use a service to manage our business logic. Create `_`UploadBookFeaturedImageService.groovy`_`:
 
 [source,groovy]
 .grails-app/services/demo/UploadBookFeaturedImageService.groovy
 ----
-include::{sourceDir}/grails-app/services/demo/UploadBookFeaturedImageService.groovy[indent=0]
+include::{sourceDir}/grails-app/services/demo/UploadBookFeaturedImageService.groovy[]
 ----
 
 The code which interacts with Cloud Storage is encapsulated in a service:
 
 [source,groovy]
-.grails-app/services/org/grails/plugins/googlecloud/storage/GoogleCloudStorageService.groovy
+.grails-app/services/demo/GoogleCloudStorageService.groovy
 ----
-include::{sourceDir}/grails-app/services/org/grails/plugins/googlecloud/storage/GoogleCloudStorageService.groovy[indent=0]
+include::{sourceDir}/grails-app/services/demo/GoogleCloudStorageService.groovy[]
 ----
 
-If the upload of an image to Google Cloud is successful, we save the reference to the media url in our domain class.
+If the upload of an image to Google Cloud is successful, we save the reference to
+the media url in our domain class.
+
+Add this method to the `BookGormService` class
 
 [source,groovy]
 .grails-app/services/demo/BookGormService.groovy
 ----
-include::{sourceDir}/grails-app/services/demo/BookGormService.groovy[indent=0, tag=updateFeaturedImageUrl]
+include::{sourceDir}/grails-app/services/demo/BookGormService.groovy[tag=updateFeaturedImageUrl]
+----
+
+We need to add one GSP file to render the upload form:
+
+[source,groovy]
+.grails-app/views/book/editFeaturedImage.gsp
+----
+include::{sourceDir}/grails-app/views/book/editFeaturedImage.gsp[]
 ----

@@ -1,10 +1,9 @@
 package demo
 
-import grails.compiler.GrailsCompileStatic
+import groovy.transform.CompileStatic
 
-@GrailsCompileStatic
+@CompileStatic
 class BootStrap {
-
     def init = { servletContext ->
         Book.saveAll(
             new Book(name: 'Grails 3: A Practical Guide to Application Development'),

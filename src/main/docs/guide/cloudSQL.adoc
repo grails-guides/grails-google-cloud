@@ -1,28 +1,18 @@
-The Grails application developed during this guide is going to use a MySQL database created with https://cloud.google.com/sql/[Cloud SQL]
-____
-Cloud SQL is a fully-managed database service that makes it easy to set up, maintain, manage, and administer your relational PostgreSQL BETA and MySQL databases in the cloud. Cloud SQL offers high performance, scalability, and convenience. Hosted on Google Cloud Platform, Cloud SQL provides a database infrastructure for applications running anywhere.
-____
+The Grails application developed during this guide is going to use a
+MySQL database created with https://cloud.google.com/sql/[Cloud SQL]
 
-If you have not enabled Cloud SQL API already, Go to your project dashboard and enable it.
+> Cloud SQL is a fully-managed database service that makes it easy to set up, maintain, manage, and administer your relational PostgreSQL BETA and MySQL databases in the cloud. Cloud SQL offers high performance, scalability, and convenience. Hosted on Google Cloud Platform, Cloud SQL provides a database infrastructure for applications running anywhere.
 
-image::enable-cloud-sql-api.png[]
+## Enable Cloud SQL API
+If you have not enabled **Cloud SQL** and **Cloud SQL API already**, go to your project
+dashboard and enable them.
 
-We are going to https://console.cloud.google.com/sql[create a new instance of Cloud SQL]
-associated to the same project we created before.
+image::cloudsql-1.png[]
 
-Go to the Cloud SQL section of the console:
+image::cloudsql-2.png[]
 
-image::select-sql-in-the-left-navigation.png[]
+image::cloudsql-3.png[]
 
-Next screenshots illustrate the process:
+image::cloudsql-4.png[]
 
-image::cloudsql_3.png[]
-image::cloudsql_4.png[]
-image::cloudsql_5.png[]
-image::cloudsql_6.png[]
-
-Once the instance is ready, we create a database:
-
-image::cloudsql_8.png[]
-image::cloudsql_9.png[]
-image::cloudsql_10.png[]
+image::cloudsqlapi-1.png[]

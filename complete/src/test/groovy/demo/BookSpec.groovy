@@ -1,15 +1,16 @@
 package demo
 
-import grails.testing.gorm.DomainUnitTest
+import grails.test.mixin.TestFor
 import spock.lang.Specification
 
+/**
+ * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
+ */
 @SuppressWarnings('MethodName')
-class BookSpec extends Specification implements DomainUnitTest<Book> {
+@TestFor(Book)
+class BookSpec extends Specification {
 
     void 'book name is not nullable'() {
-        given:
-        Book domain = new Book()
-
         when:
         domain.name = null
 

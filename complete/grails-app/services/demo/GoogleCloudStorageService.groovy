@@ -47,10 +47,10 @@ class GoogleCloudStorageService implements GrailsConfigurationAware {
                 // Modify access list to allow all users with link to read file
                 .setAcl([Acl.of(Acl.User.ofAllUsers(), Acl.Role.READER)])
                 .build()
-    }
+   }
 
-    boolean deleteFile(String fileName) {
-        BlobId blobId = BlobId.of(bucket, fileName)
-        storage.delete(blobId)
-    }
+   boolean deleteFile(String fileName) {
+       BlobId blobId = BlobId.of(bucket, fileName)
+       storage.delete(blobId)
+   }
 }

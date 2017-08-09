@@ -1,7 +1,7 @@
 package demo
 
-import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
+import groovy.transform.CompileStatic
 
 @Slf4j
 @CompileStatic
@@ -11,7 +11,7 @@ class UploadBookFeaturedImageService {
 
     GoogleCloudStorageService googleCloudStorageService
 
-    static String fileSuffix() {
+    private static String fileSuffix() {
         new Date().format('-YYYY-MM-dd-HHmmssSSS')
     }
 

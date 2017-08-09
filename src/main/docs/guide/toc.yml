@@ -1,31 +1,35 @@
 gettingStarted:
   title: Getting Started
-  requirements: What you will need
-  howto: How to complete the guide
+costs:
+  title: Costs
+whatYouWillNeed:
+  title: What you will need
+howToComplete:
+  title: How to Complete
 writingTheApp:
-  title: Writing the Application
+  title: Writing the application
   domainClass: Domain Class
-  seedData: Seed Data
-  displayBooks: Display Books
-googleCloud:
+  urlMappings: Display Books
+cloudSDK:
   title: Cloud SDK
-appEngine:
+googleAppEngine:
   title: Google App Engine
-  gapGradlePlugin: Google App Engine Gradle Plugin
+  googleAppEngineGradlePlugin: 'Google App Engine Gradle Plugin'
   applicationDeploymentConfiguration: Application Deployment Configuration
   springBootJetty: SpringBoot Jetty
 cloudSQL:
   title: Cloud SQL
-  dataSourceGoogleCloudSQL: Datasource using Cloud SQL
+  createCloudSQLInstance: Create Cloud SQL Instance
+  datasourceUsingCloudSQL: Datasource using Cloud SQL
 cloudStorage:
   title: Cloud Storage
 deployingTheApp:
-  title: Deploying the App
+  title: Deploying the app
 logging:
-    title: Logging
+  title: Logging
+cleaningUp:
+  title: Cleaning Up
 learnMore:
-    title: Learn More     
+   title: Learn More
 helpWithGrails:
-    title: Help With Grails
-appendixA:
-  title: Appendix A - Scaffolding
+  title: Help With Grails

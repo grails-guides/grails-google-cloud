@@ -1,10 +1,8 @@
 package demo
 
-import grails.compiler.GrailsCompileStatic
 import grails.validation.Validateable
 import org.springframework.web.multipart.MultipartFile
 
-@GrailsCompileStatic
 class FeaturedImageCommand implements Validateable {
     MultipartFile featuredImageFile
     Long id
@@ -13,7 +11,7 @@ class FeaturedImageCommand implements Validateable {
     static constraints = {
         id nullable: false
         version nullable: false
-        featuredImageFile  validator: { MultipartFile val, FeaturedImageCommand obj ->
+       featuredImageFile  validator: { MultipartFile val, FeaturedImageCommand obj ->
             if ( val == null ) {
                 return false
             }

@@ -1,12 +1,11 @@
 // tag::packageImport[]
 package demo
 
+import static org.springframework.http.HttpStatus.*
 import grails.gorm.transactions.Transactional
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import org.springframework.context.MessageSource
-
-import static org.springframework.http.HttpStatus.*
 
 // end::packageImport[]
 // tag::imports[]
