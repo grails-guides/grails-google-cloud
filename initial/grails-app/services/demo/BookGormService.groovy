@@ -4,6 +4,7 @@ import grails.gorm.transactions.Transactional
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 
+@Transactional
 @CompileStatic
 class BookGormService {
 
