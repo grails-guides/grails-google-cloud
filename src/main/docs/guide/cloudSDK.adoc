@@ -4,7 +4,7 @@ image::create-project.png[]
 
 image::create-project-2.png[]
 
-We named the project `grailsgooglecloud_`
+We named the project `grailsgooglecloud`
 
 Install https://cloud.google.com/sdk/downloads[Cloud SDK] for your operating system.
 
