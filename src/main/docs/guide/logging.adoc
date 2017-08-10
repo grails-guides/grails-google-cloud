@@ -26,4 +26,4 @@ If you redeploy the app to App Engine and access the _/legal_ end point, you wil
 Check https://cloud.google.com/appengine/docs/flexible/java/writing-application-logs[Writing Application Logs]
 documentation to read more about logs in the Flexible Environment.
 
-_Write your application logs using stdout for output and stderr for errors. Note that this does not provide log levels that you can use for filtering in the Logs Viewer; however, the Logs Viewer does provide other filtering, such as text, timestamp, etc._
+Write your application logs using stdout for output and stderr for errors. Note that this does not provide log levels that you can use for filtering in the Logs Viewer; however, the Logs Viewer does provide other filtering, such as text, timestamp, etc.
