@@ -114,7 +114,7 @@ environments:
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
             driverClassName: com.mysql.cj.jdbc.Driver
             dbCreate: update
-            url: jdbc:mysql://google/grailsgooglecloud?socketFactory=com.google.cloud.sql.mysql.SocketFactory&cloudSqlInstance=grailsguide-176214:us-central1:grailsgooglecloud&useSSL=true
+            url: jdbc:mysql://google/grailsgooglecloud?socketFactory=com.google.cloud.sql.mysql.SocketFactory&cloudSqlInstance=inner-topic-174815:us-central1:grailsgooglecloud&useSSL=true
             username: root
             password: grailsgooglecloud
 #end::datasourceProduction[]
