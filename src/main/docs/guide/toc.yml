@@ -9,6 +9,7 @@ howToComplete:
 writingTheApp:
   title: Writing the application
   domainClass: Domain Class
+  seedData: Seed Data
   urlMappings: Display Books
 cloudSDK:
   title: Cloud SDK
