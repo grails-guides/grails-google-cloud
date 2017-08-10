@@ -1,4 +1,4 @@
-We are going to https://console.cloud.google.com/sql[create a new instance of Cloud SQL])
+We are going to https://console.cloud.google.com/sql[create a new instance of Cloud SQL]
 associated to the same project we created before.
 
 Go to the Cloud SQL section of the console:
