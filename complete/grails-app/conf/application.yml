@@ -139,7 +139,8 @@ environments:
 ---
 #tag::bucket[]
 googlecloud:
-    projectid: grailsguide-176214
+    projectid: shaped-icon-194504
+    bigTableInstance: google-cloud-demo
     cloudStorage:
         bucket: grailsguidebucket
 #end::bucket[]  
