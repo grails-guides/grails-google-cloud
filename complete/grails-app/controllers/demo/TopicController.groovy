@@ -5,7 +5,7 @@ class TopicController {
     TopicService topicService
 
     def create(String topicId) {
-        String result = topicService.createTopicExample(topcId)
+        String result = topicService.createTopicExample(topicId)
 
     }
 
