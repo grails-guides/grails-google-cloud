@@ -3,6 +3,9 @@ package demo
 import groovy.util.logging.Slf4j
 import groovy.transform.CompileStatic
 
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
 @Slf4j
 @CompileStatic
 class UploadBookFeaturedImageService {
@@ -12,7 +15,7 @@ class UploadBookFeaturedImageService {
     GoogleCloudStorageService googleCloudStorageService
 
     private static String fileSuffix() {
-        new Date().format('-YYYY-MM-dd-HHmmssSSS')
+        LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"))
     }
 
     Book uploadFeaturedImage(FeaturedImageCommand cmd) {
