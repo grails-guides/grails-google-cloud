@@ -1,13 +1,11 @@
-# grails-google-cloud
+# Deploy a Grails app to Google Cloud
 
-To generate the guide:
+This repository contains the worked sample app for the [Deploy a Grails app to Google Cloud](https://grails.apache.org/guides/grails-google-cloud/4/guide/index.html) guide on the Apache Grails site.
 
-```
-./gradlew publishGuide
-```
+## Run the example
 
-To open Guide:
+`./gradlew bootRun`
 
-```
-open build/docs/index.html 
-```
+## Maintained at apache/grails-static-website
+
+The guide narrative is maintained at https://github.com/apache/grails-static-website. Changes to the guide content go there; this repo holds the worked sample app only.
